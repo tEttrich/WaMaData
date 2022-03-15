@@ -40,5 +40,21 @@ Das IoT-Device übermittelt die Daten per MQTT-Protokoll als UTF8-String an den 
 Abb. 6-1 zeigt den Plot aller Messdaten. Es wird deutlich, dass es unterschiedliche Zustände gibt.
 ![Abb6-1](/../main/11_Abbildungen/Abb6-1.jpg)
 
+Abb. 6 2 visualisiert die Messdaten eines Waschmaschinen-Zyklus. Es können vier unterschiedliche Zustände erkannt werden: (1) Leerlauf, (2) leichter Waschgang, (3) starker Waschgang und (4) Schleudergang.
+
+Ein näherer Blick auf die Messdaten der markierten Bereiche stärkt den Eindruck. Wie in Abb. 6 2 zu sehen ist, unterscheiden sich die Ausschläge der Messdaten der vier Betriebszustände. Der Leerlauf zeigt einen ruhigen Verlauf, der Schleudergang zeigt die stärksten Ausschläge.
+
+In Abb. 6 4 werden die Fast Fourier Transformationen der vier Betriebszustände dargestellt. Sie unterscheiden sich deutlich. Leerlauf und leichter Waschgang sehen sich zwar ähnlich, jedoch sind die Ausschläge des leichten Waschgangs im Verlauf stärker. Der starke Waschgang und der Schleudergang unterscheiden sich deutlich von den beiden vorherigen und voneinander. 
+
+Die in Abb. 6 5 dargestellten Power-Spectral-Density verstärkt den Eindruck, dass sich vier Betriebszustände unterscheiden lassen.
+
+## 7 Datenbankanbindung
+Es kann sowohl ein lokaler MongoDB-Server oder eine MongoDB Atlas Cloud-Server genutzt werden. Es bietet sich an, einen Cloud-Server zu nutzen. Die Daten können jederzeit via Code 7 1 aus der MongoDB Atlas Cloud-Datenbank exportiert werden.
+\cd C:\Program Files\MongoDB\Server\4.2\bin
+\mongoexport --uri mongodb+srv://test:test@cluster1337.kv1ih.mongodb.net/ProjectData --collection Data  --out=C:\Users\Tony\Desktop\WaMaData.json
+
+Die Daten werden als JSON-Datei auf dem Desktop abgelegt.
+
+
 
 
