@@ -41,12 +41,16 @@ Abb. 6-1 zeigt den Plot aller Messdaten. Es wird deutlich, dass es unterschiedli
 ![Abb6-1](/../main/11_Abbildungen/Abb6-1.png)
 
 Abb. 6 2 visualisiert die Messdaten eines Waschmaschinen-Zyklus. Es können vier unterschiedliche Zustände erkannt werden: (1) Leerlauf, (2) leichter Waschgang, (3) starker Waschgang und (4) Schleudergang.
+![Abb62](/../main/11_Abbildungen/Abb62.png)
 
-Ein näherer Blick auf die Messdaten der markierten Bereiche stärkt den Eindruck. Wie in Abb. 6 2 zu sehen ist, unterscheiden sich die Ausschläge der Messdaten der vier Betriebszustände. Der Leerlauf zeigt einen ruhigen Verlauf, der Schleudergang zeigt die stärksten Ausschläge.
+Ein näherer Blick auf die Messdaten der markierten Bereiche stärkt den Eindruck. Wie in Abb. 6 3 zu sehen ist, unterscheiden sich die Ausschläge der Messdaten der vier Betriebszustände. Der Leerlauf zeigt einen ruhigen Verlauf, der Schleudergang zeigt die stärksten Ausschläge.
+![Abb63](/../main/11_Abbildungen/Abb63.png)
 
 In Abb. 6 4 werden die Fast Fourier Transformationen der vier Betriebszustände dargestellt. Sie unterscheiden sich deutlich. Leerlauf und leichter Waschgang sehen sich zwar ähnlich, jedoch sind die Ausschläge des leichten Waschgangs im Verlauf stärker. Der starke Waschgang und der Schleudergang unterscheiden sich deutlich von den beiden vorherigen und voneinander. 
+![Abb64](/../main/11_Abbildungen/Abb64.png)
 
 Die in Abb. 6 5 dargestellten Power-Spectral-Density verstärkt den Eindruck, dass sich vier Betriebszustände unterscheiden lassen.
+![Abb65](/../main/11_Abbildungen/Abb65.png)
 
 ## 7 Datenbankanbindung
 Es kann sowohl ein lokaler MongoDB-Server oder eine MongoDB Atlas Cloud-Server genutzt werden. Es bietet sich an, einen Cloud-Server zu nutzen. Die Daten können jederzeit via Code 7 1 aus der MongoDB Atlas Cloud-Datenbank exportiert werden.
@@ -62,10 +66,13 @@ Auf die Daten kann mit den folgenden Informationen zugegriffen werden:
 
 ## 9 Benutzeroberfläche
 Die Benutzeroberfläche wird mit Qt generiert. In einem ersten Schritt sollen die Daten vom MongoDB Atlas Cloud-Server abgerufen werden. Die Daten werden in einen Pandas Dataframe geschrieben, um effizient verarbeitet werden zu können.
+![Abb91](/../main/11_Abbildungen/Abb91.png)
 
 Per *Daten > importieren* lassen sich die Daten vom MongoDB-Server abrufen (vgl. Abb. 9 1). Die Statusausgabe gibt *„Dataframe erfolgreich erstellt.“* aus, sobald das Dataframe erstellt ist (vgl. Abb. 9 2).
+![Abb91](/../main/11_Abbildungen/Abb92.png)
 
 In einem nächsten Schritt sollen die Daten visualisiert werden. Der Nutzer mit per *Daten > aktualisieren* (vgl. Abb. 9 1). die Möglichkeit haben, den Betrachtungszeitraum des Dataframes einzugrenzen. Dazu können Start und Ende des Betrachtungszeitraums in einem Dialogfenster mit Datum und Uhrzeit festgelegt werden.
+![Abb93](/../main/11_Abbildungen/Abb93.png)
 
 Anhand der Daten soll das Dataframe gefiltert werden. Daraus sollen die Analysen zum Betrachtungszeitraum angestellt und visualisiert werden.
 
