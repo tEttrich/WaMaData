@@ -48,6 +48,7 @@ Abb. 6 2 visualisiert die Messdaten eines Waschmaschinen-Zyklus. Es können vier
 ![Abb62](/../main/11_Abbildungen/Abb62.png)
 
 Ein näherer Blick auf die Messdaten der markierten Bereiche stärkt den Eindruck. Wie in Abb. 6 3 zu sehen ist, unterscheiden sich die Ausschläge der Messdaten der vier Betriebszustände. Der Leerlauf zeigt einen ruhigen Verlauf, der Schleudergang zeigt die stärksten Ausschläge.
+
 ![Abb63](/../main/11_Abbildungen/Abb63.png)
 
 In Abb. 6 4 werden die Fast Fourier Transformationen der vier Betriebszustände dargestellt. Sie unterscheiden sich deutlich. Leerlauf und leichter Waschgang sehen sich zwar ähnlich, jedoch sind die Ausschläge des leichten Waschgangs im Verlauf stärker. Der starke Waschgang und der Schleudergang unterscheiden sich deutlich von den beiden vorherigen und voneinander. 
