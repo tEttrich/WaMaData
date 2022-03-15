@@ -38,7 +38,7 @@ Das IoT-Device übermittelt die Daten per MQTT-Protokoll als UTF8-String an den 
 
 ## 6 Analyse
 Abb. 6-1 zeigt den Plot aller Messdaten. Es wird deutlich, dass es unterschiedliche Zustände gibt.
-![Abb. 6-1](/../main/11_Abbildungen/Abb. 6-1.jpg)
+![Abb. 6-1](/../main/11_Abbildungen/Abb.6-1.jpg)
 
 
 
