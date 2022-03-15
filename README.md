@@ -50,10 +50,15 @@ Die in Abb. 6 5 dargestellten Power-Spectral-Density verstärkt den Eindruck, da
 
 ## 7 Datenbankanbindung
 Es kann sowohl ein lokaler MongoDB-Server oder eine MongoDB Atlas Cloud-Server genutzt werden. Es bietet sich an, einen Cloud-Server zu nutzen. Die Daten können jederzeit via Code 7 1 aus der MongoDB Atlas Cloud-Datenbank exportiert werden.
-\cd C:\Program Files\MongoDB\Server\4.2\bin
-\mongoexport --uri mongodb+srv://test:test@cluster1337.kv1ih.mongodb.net/ProjectData --collection Data  --out=C:\Users\Tony\Desktop\WaMaData.json
-
+`cd C:\Program Files\MongoDB\Server\4.2\bin`
+`mongoexport --uri mongodb+srv://test:test@cluster1337.kv1ih.mongodb.net/ProjectData --collection Data  --out=C:\Users\Tony\Desktop\WaMaData.json`
 Die Daten werden als JSON-Datei auf dem Desktop abgelegt.
+
+## 8 Datenzugänglichkeit
+Auf die Daten kann mit den folgenden Informationen zugegriffen werden:
+- URI           `mongodb+srv://test:test@cluster1337.kv1ih.mongodb.net/ProjectData`
+- Dataset       `ProjectData`
+- Collection    `Data`
 
 
 
