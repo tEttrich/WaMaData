@@ -38,7 +38,7 @@ Das IoT-Device übermittelt die Daten per MQTT-Protokoll als UTF8-String an den 
 
 ## 6 Analyse
 Abb. 6-1 zeigt den Plot aller Messdaten. Es wird deutlich, dass es unterschiedliche Zustände gibt.
-![Abb6-1](/../main/11_Abbildungen/Abb6-1.jpg)
+![Abb6-1](/../main/11_Abbildungen/Abb6-1.png)
 
 Abb. 6 2 visualisiert die Messdaten eines Waschmaschinen-Zyklus. Es können vier unterschiedliche Zustände erkannt werden: (1) Leerlauf, (2) leichter Waschgang, (3) starker Waschgang und (4) Schleudergang.
 
@@ -60,6 +60,12 @@ Auf die Daten kann mit den folgenden Informationen zugegriffen werden:
 - Dataset       `ProjectData`
 - Collection    `Data`
 
+## 9 Benutzeroberfläche
+Die Benutzeroberfläche wird mit Qt generiert. In einem ersten Schritt sollen die Daten vom MongoDB Atlas Cloud-Server abgerufen werden. Die Daten werden in einen Pandas Dataframe geschrieben, um effizient verarbeitet werden zu können.
 
+Per *Daten > importieren* lassen sich die Daten vom MongoDB-Server abrufen (vgl. Abb. 9 1). Die Statusausgabe gibt *„Dataframe erfolgreich erstellt.“* aus, sobald das Dataframe erstellt ist (vgl. Abb. 9 2).
 
+In einem nächsten Schritt sollen die Daten visualisiert werden. Der Nutzer mit per *Daten > aktualisieren* (vgl. Abb. 9 1). die Möglichkeit haben, den Betrachtungszeitraum des Dataframes einzugrenzen. Dazu können Start und Ende des Betrachtungszeitraums in einem Dialogfenster mit Datum und Uhrzeit festgelegt werden.
+
+Anhand der Daten soll das Dataframe gefiltert werden. Daraus sollen die Analysen zum Betrachtungszeitraum angestellt und visualisiert werden.
 
