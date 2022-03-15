@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>frm_main</class>
+ <widget class="QMainWindow" name="frm_main">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>79</y>
+      <width>1200</width>
+      <height>681</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab_start">
+     <attribute name="title">
+      <string>Start</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab_data">
+     <attribute name="title">
+      <string>Daten laden</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab_table">
+     <attribute name="title">
+      <string>Tabelle</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab_vis">
+     <attribute name="title">
+      <string>Visualisierung</string>
+     </attribute>
+     <widget class="QPushButton" name="buttonAktualisieren">
+      <property name="geometry">
+       <rect>
+        <x>84</x>
+        <y>670</y>
+        <width>131</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Chart aktualisieren</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="labelStatus">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>30</y>
+      <width>1200</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="text">
+     <string>Statusausgabe</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1200</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuDatei">
+    <property name="title">
+     <string>Datei</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="dateiBeenden"/>
+   </widget>
+   <widget class="QMenu" name="menuDaten">
+    <property name="title">
+     <string>Daten</string>
+    </property>
+    <addaction name="actionImportieren"/>
+    <addaction name="actionAktualisieren"/>
+   </widget>
+   <addaction name="menuDatei"/>
+   <addaction name="menuDaten"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="dateiBeenden">
+   <property name="text">
+    <string>beenden</string>
+   </property>
+  </action>
+  <action name="actionAktualisieren">
+   <property name="text">
+    <string>aktualisieren</string>
+   </property>
+  </action>
+  <action name="actionImportieren">
+   <property name="text">
+    <string>importieren</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
