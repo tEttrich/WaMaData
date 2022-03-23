@@ -60,16 +60,16 @@ Die in Abb. 6 5 dargestellten Power-Spectral-Density verstärkt den Eindruck, da
 ![Abb65](/../main/11_Abbildungen/Abb65.png)
 
 ## 7 Klassifizierung
-Die Klassifizierung findet mittels KMeans statt. KMeans wird unächst mit allen bisherigen Daten via `KMeans(n_clusters 0 4).fit(df_train)` trainiert. Abb. 10 1 veranschaulicht die Klassifizierung.
+Die Klassifizierung findet mittels KMeans statt. KMeans wird unächst mit allen bisherigen Daten via `KMeans(n_clusters 0 4).fit(df_train)` trainiert. Abb. 7 1 veranschaulicht die Klassifizierung.
 
-![Abb101](/../main/11_Abbildungen/Abb101.png)
+![101](/../main/11_Abbildungen/101.png)
 
-Neu aufgezeichnete Daten oder ein beliebiger Datensatz können zur Klassifzierung übergeben werden. Mittels `KMeans().fit_predict(df_test)` findet die Klassifizierung des Datnesatzes statt. Abb. 10 2 veranschaulicht die Klassifizierung.
+Neu aufgezeichnete Daten oder ein beliebiger Datensatz können zur Klassifzierung übergeben werden. Mittels `KMeans().fit_predict(df_test)` findet die Klassifizierung des Datnesatzes statt. Abb. 7 2 veranschaulicht die Klassifizierung.
 
-![Abb103](/../main/11_Abbildungen/Abb103.png)
+![103](/../main/11_Abbildungen/103.png)
 
 ## 8 Datenbankanbindung
-Es kann sowohl ein lokaler MongoDB-Server oder eine MongoDB Atlas Cloud-Server genutzt werden. Es bietet sich an, einen Cloud-Server zu nutzen. Die Daten können jederzeit via Code 7 1 aus der MongoDB Atlas Cloud-Datenbank exportiert werden.
+Es kann sowohl ein lokaler MongoDB-Server oder eine MongoDB Atlas Cloud-Server genutzt werden. Es bietet sich an, einen Cloud-Server zu nutzen. Die Daten können jederzeit via Code 8 1 aus der MongoDB Atlas Cloud-Datenbank exportiert werden.
 `cd C:\Program Files\MongoDB\Server\4.2\bin`
 `mongoexport --uri mongodb+srv://test:test@cluster1337.kv1ih.mongodb.net/ProjectData --collection Data  --out=C:\Users\Tony\Desktop\WaMaData.json`
 Die Daten werden als JSON-Datei auf dem Desktop abgelegt.
@@ -85,11 +85,11 @@ Die Benutzeroberfläche wird mit Qt generiert. In einem ersten Schritt sollen di
 
 ![Abb91](/../main/11_Abbildungen/Abb91.png)
 
-Per *Daten > importieren* lassen sich die Daten vom MongoDB-Server abrufen (vgl. Abb. 9 1). Die Statusausgabe gibt *„Dataframe erfolgreich erstellt.“* aus, sobald das Dataframe erstellt ist (vgl. Abb. 9 2).
+Per *Daten > importieren* lassen sich die Daten vom MongoDB-Server abrufen (vgl. Abb. 10 1). Die Statusausgabe gibt *„Dataframe erfolgreich erstellt.“* aus, sobald das Dataframe erstellt ist (vgl. Abb. 10 2).
 
 ![Abb91](/../main/11_Abbildungen/Abb92.png)
 
-In einem nächsten Schritt sollen die Daten visualisiert werden. Der Nutzer mit per *Daten > aktualisieren* (vgl. Abb. 9 1). die Möglichkeit haben, den Betrachtungszeitraum des Dataframes einzugrenzen. Dazu können Start und Ende des Betrachtungszeitraums in einem Dialogfenster mit Datum und Uhrzeit festgelegt werden.
+In einem nächsten Schritt sollen die Daten visualisiert werden. Der Nutzer mit per *Daten > aktualisieren* (vgl. Abb. 10 1). die Möglichkeit haben, den Betrachtungszeitraum des Dataframes einzugrenzen. Dazu können Start und Ende des Betrachtungszeitraums in einem Dialogfenster mit Datum und Uhrzeit festgelegt werden.
 
 ![Abb93](/../main/11_Abbildungen/Abb93.png)
 
