@@ -86,3 +86,43 @@ def createPlot(Start, End):
 
     print("Visualizing Raw Data, fast Fourier transformation and Power-Spectral-Density")
     plotArrays(ax,ay,az,x_time,x_freq,LengthSample)
+
+def trainCluster()
+    df_train = df[['x_a', 'y_a', 'z_a']]
+    # train KMeans
+    train_clusters = KMeans(n_clusters=4).fit(df_train)
+
+    # visualize clustered training Data
+    fig = plt.figure()
+    ax = fig.add_subplot(projection='3d')
+
+    xs = df_train['x_a']
+    ys = df_train['y_a']
+    zs = df_train['z_a']
+
+    ax.scatter(xs, ys, zs, c = train_clusters.labels_)
+    ax.set_xlabel('X')
+    ax.set_ylabel('Y')
+    ax.set_zlabel('Z')
+
+def testCluster(Start, End)
+    df_test = df[df['time']>=StartSample]
+    df_test = df_mask[df_mask['time']<=EndSample]
+    df_test = df[['x_a', 'y_a', 'z_a']]
+
+    # predict cluster
+    test_clusters = KMeans(n_clusters=4).fit_predict(df_test)
+
+    # visualize clustered test Data
+    fig = plt.figure()
+    ax2 = fig.add_subplot(projection='3d')
+
+    xst = df_test['x_a']
+    yst = df_test['y_a']
+    zst = df_test['z_a']
+
+    ax2.scatter(xst, yst, zst, c = test_clusters)
+    ax2.set_xlabel('X')
+    ax2.set_ylabel('Y')
+    ax2.set_zlabel('Z')
+    
