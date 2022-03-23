@@ -59,19 +59,28 @@ Die in Abb. 6 5 dargestellten Power-Spectral-Density verstärkt den Eindruck, da
 
 ![Abb65](/../main/11_Abbildungen/Abb65.png)
 
-## 7 Datenbankanbindung
+## 7 Klassifizierung
+Die Klassifizierung findet mittels KMeans statt. KMeans wird unächst mit allen bisherigen Daten via `KMeans(n_clusters 0 4).fit(df_train)` trainiert. Abb. 10 1 veranschaulicht die Klassifizierung.
+
+![Abb101](/../main/11_Abbildungen/Abb101.png)
+
+Neu aufgezeichnete Daten oder ein beliebiger Datensatz können zur Klassifzierung übergeben werden. Mittels `KMeans().fit_predict(df_test)` findet die Klassifizierung des Datnesatzes statt. Abb. 10 2 veranschaulicht die Klassifizierung.
+
+![Abb103](/../main/11_Abbildungen/Abb103.png)
+
+## 8 Datenbankanbindung
 Es kann sowohl ein lokaler MongoDB-Server oder eine MongoDB Atlas Cloud-Server genutzt werden. Es bietet sich an, einen Cloud-Server zu nutzen. Die Daten können jederzeit via Code 7 1 aus der MongoDB Atlas Cloud-Datenbank exportiert werden.
 `cd C:\Program Files\MongoDB\Server\4.2\bin`
 `mongoexport --uri mongodb+srv://test:test@cluster1337.kv1ih.mongodb.net/ProjectData --collection Data  --out=C:\Users\Tony\Desktop\WaMaData.json`
 Die Daten werden als JSON-Datei auf dem Desktop abgelegt.
 
-## 8 Datenzugänglichkeit
+## 9 Datenzugänglichkeit
 Auf die Daten kann mit den folgenden Informationen zugegriffen werden:
 - URI           `mongodb+srv://test:test@cluster1337.kv1ih.mongodb.net/ProjectData`
 - Dataset       `ProjectData`
 - Collection    `Data`
 
-## 9 Benutzeroberfläche
+## 10 Benutzeroberfläche
 Die Benutzeroberfläche wird mit Qt generiert. In einem ersten Schritt sollen die Daten vom MongoDB Atlas Cloud-Server abgerufen werden. Die Daten werden in einen Pandas Dataframe geschrieben, um effizient verarbeitet werden zu können.
 
 ![Abb91](/../main/11_Abbildungen/Abb91.png)
