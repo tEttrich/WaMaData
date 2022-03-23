@@ -60,13 +60,19 @@ Die in Abb. 6 5 dargestellten Power-Spectral-Density verstärkt den Eindruck, da
 ![Abb65](/../main/11_Abbildungen/Abb65.png)
 
 ## 7 Klassifizierung
-Die Klassifizierung findet mittels KMeans statt. KMeans wird unächst mit allen bisherigen Daten via `KMeans(n_clusters 0 4).fit(df_train)` trainiert. Abb. 7 1 veranschaulicht die Klassifizierung.
+Zunächst werden die vorhandenenen Daten nach den 4 unterschiedlichen Betriebszuständen klassifiziert. Die Klassifizierung findet mittels KMeans statt. KMeans wird zunächst mit allen bisherigen Daten via `KMeans(n_clusters 0 4).fit(df_train)` trainiert. Abb. 7 1 veranschaulicht die Klassifizierung. Die Ergebnisse werden dem Dataframe als Feature `status` übergeben.
 
 ![101](/../main/11_Abbildungen/101.png)
 
-Neu aufgezeichnete Daten oder ein beliebiger Datensatz können zur Klassifzierung übergeben werden. Mittels `KMeans().fit_predict(df_test)` findet die Klassifizierung des Datnesatzes statt. Abb. 7 2 veranschaulicht die Klassifizierung.
+Zur Klassifizierung des aktuellen Betriebszustands soll das Multi-Layer Perceptron Classifier genutzt werden.
+Als Features werden die Beschleunigungswerte und der Timestamp übergeben. Zielwert ist der vorher mit KMeans festgestellte Zustand `status`. Via `train_test_split()` werden Trainings- und Testdatensätze erstellt.
+Sobald die Vorhersagen generiert sind, kann die Leistung des Modells bewertet werden. Hierzu wird die Konfusionsmatrix ausgegeben. Die Ausgabe zeigt die Leistung des Modells für Trainingsdaten. Wie Abb. 7 2 zeigt, liegen die Genauigkeit und der F1-Score zwischen etwa 0,90 und 1,00. Die Vorhersage ist also relativ genau.
 
-![103](/../main/11_Abbildungen/103.png)
+![104](/../main/11_Abbildungen/104.png)
+
+Die Leistung des Modells soll zudem anhand der Testdaten bewertet werden. Die Ausgabe in Abb. 7 3 zeigt die Leistung des Modells bei Testdaten. Die Genauigkeit und die F1-Werte liegen zwischen 0,92 und 1,00. Der Zustand der Waschmaschine kann also relativ präzise bestimmt werden.
+
+![105](/../main/11_Abbildungen/105.png)
 
 ## 8 Datenbankanbindung
 Es kann sowohl ein lokaler MongoDB-Server oder eine MongoDB Atlas Cloud-Server genutzt werden. Es bietet sich an, einen Cloud-Server zu nutzen. Die Daten können jederzeit via Code 8 1 aus der MongoDB Atlas Cloud-Datenbank exportiert werden.
